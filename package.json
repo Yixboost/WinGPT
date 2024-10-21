@@ -1,0 +1,56 @@
+{
+  "name": "WinGPT",
+  "version": "1.2.3",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Yixboost NL",
+  "license": "GNU",
+  "description": "Get Any AI on Windows",
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^5.16.7",
+    "auto-launch": "^5.0.6",
+    "chokidar": "^3.6.0",
+    "custom-electron-titlebar": "^4.2.8",
+    "electron-store": "^10.0.0",
+    "is-elevated": "^4.0.0"
+  },
+  "devDependencies": {
+    "electron": "^32.0.1",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.yixboost.wingpt",
+    "productName": "WinGPT",
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "offline.html",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "store"
+    },
+    "win": {
+      "target": [
+        "appx",
+        "nsis",
+        "msi"
+      ],
+      "icon": "assets/icon.png"
+    },
+    "appx": {
+      "publisher": "CN=YourPublisherName",
+      "publisherDisplayName": "Yixboost NL",
+      "identityName": "com.yixboost.wingpt"
+    }
+  }
+}

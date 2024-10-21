@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | WinGPT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+
+        body {
+            overflow: -moz-hidden;
+        }
+
+        body {
+    user-select: none;
+    -webkit-user-select: none; /* Voor Safari */
+    -ms-user-select: none; /* Voor IE/Edge */
+}
+
+/* Voorkom dat afbeeldingen geselecteerd of aangeklikt kunnen worden */
+img {
+    pointer-events: none;
+}
+
+        * {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        :root {
+            --bg-primary: #121212;
+            --bg-secondary: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --accent-color: #fff;
+            --card-bg: #2a2a2a;
+            --card-border: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            height: 100vh;
+            display: flex;
+        }
+
+        .app-window {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: var(--bg-secondary);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid var(--card-border);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .nav-item {
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-item i {
+            margin-right: 8px; 
+        }
+
+        .nav-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .nav-item.active {
+            background-color: var(--accent-color);
+            color: var(--bg-primary);
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+            color: var(--accent-color);
+            font-weight: 300;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 30px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: center; 
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+        }
+
+        .feature-list {
+            list-style-type: none;
+            margin-bottom: 40px;
+        }
+
+        .feature-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: '➤';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        #help-content, #bots-content, #about-content {
+            display: none;
+        }
+
+        #help-content h2 {
+            margin-top: 30px;
+        }
+
+        #help-content p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-window">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="http://yixgames.nl.eu.org/yixboost/p/wingpt/assets/images/logo-text.png" alt="WinGPT Logo" style="width: 100%; height: auto;">
+            </div>
+            <nav>
+                <div class="nav-item active" onclick="showContent('home')">
+                    <i class="fas fa-home"></i> Home
+                </div>
+                <div class="nav-item" onclick="showContent('bots')">
+                    <i class="fas fa-robot"></i> AI Bots
+                </div>
+                <div class="nav-item" onclick="showContent('help')">
+                    <i class="fas fa-question-circle"></i> Help
+                </div>
+                <div class="nav-item" onclick="showContent('about')">
+                    <i class="fas fa-info-circle"></i> About WinGPT
+                </div>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div id="home-content">
+                <h1>Welcome to WinGPT</h1>
+                <p>Your gateway to advanced AI assistants on Windows, AI at your Fingertips</p>
+                <br>
+                <div class="card-grid">
+                    <div class="card">
+                        <i class="fas fa-plug" style="font-size: 2em; color: var(--accent-color);"></i>
+                        <h3>Multi-AI Integration</h3>
+                        <p>Access Claude, Gemini, ChatGPT, You.com, and Blackbox AI from a single interface.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-cogs" style="font-size: 2em; color: var(--accent-color);"></i>
+                        <h3>Seamless Experience</h3>
+                        <p>Enjoy a native Windows app feel with the power of web technologies.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-user-cog" style="font-size: 2em; color: var(--accent-color);"></i>
+                        <h3>Customization</h3>
+                        <p>Tailor the app to your needs with various settings and preferences.</p>
+                    </div>
+                </div>
+
+                <h2>Key Features</h2>
+                <ul class="feature-list">
+                    <li>Intuitive chat interface for all AI models</li>
+                    <li>Quick switching between different AI assistants</li>
+                    <li>Conversation history and export options</li>
+                    <li>Dark mode for comfortable long-term use</li>
+                    <li>Regular updates with new features and AI models</li>
+                </ul>
+            </div>
+            
+            <div id="bots-content">
+                <h1>AI Bots</h1>
+                <div class="card-grid">
+                    <a href="https://claude.ai">
+                    <div class="card">
+                        <img src="http://yixgames.nl.eu.org/yixboost/p/wingpt/assets/images/claude.png" width="100%" alt="Claude AI">
+                        <h3>Claude AI</h3>
+                        <p>A conversational AI designed to assist with creative writing, answering questions, and more.</p>
+                    </div>
+                    </a>
+                    <a href="https://chatgpt.com">
+                    <div class="card">
+                        <img src="http://yixgames.nl.eu.org/yixboost/p/wingpt/assets/images/chatgpt.png" width="100%" alt="ChatGPT">
+                        <h3>ChatGPT</h3>
+                        <p>The popular chatbot AI from OpenAI, great for answering queries and creating conversational experiences.</p>
+                    </div>
+                    </a>
+                    <a href="https://you.com">
+                    <div class="card">
+                        <img src="http://yixgames.nl.eu.org/yixboost/p/wingpt/assets/images/you.png" width="100%" alt="You.com AI">
+                        <h3>You.com AI</h3>
+                        <p>A search engine integrated AI offering real-time web browsing and answers with speed and accuracy.</p>
+                    </div>
+                    </a>
+                    <a href="https://blackbox.ai">
+                    <div class="card">
+                        <img src="http://yixgames.nl.eu.org/yixboost/p/wingpt/assets/images/blackbox.png" width="100%" alt="Blackbox AI">
+                        <h3>Blackbox AI</h3>
+                        <p>An AI-powered coding assistant that helps developers by generating code snippets and suggestions.</p>
+                    </div>
+                    </a>
+                    <a href="https://gemini.google.com/app">
+                    <div class="card">
+                        <img src="http://yixgames.nl.eu.org/yixboost/p/wingpt/assets/images/gemini.png" width="100%" alt="Google Gemini">
+                        <h3>Google Gemini</h3>
+                        <p>Google Gemini is an advanced AI model from Google. It provides powerful answers and integrates text and images.</p>
+                    </div>   
+                    </a>                 
+                </div>
+            </div>
+
+            <div id="help-content">
+                <h1>Help</h1>
+                <h2>Frequently Asked Questions</h2>
+                <p>1. How do I get started?</p>
+                <p>Simply navigate to the AI Bots section and select your preferred AI to begin.</p>
+                <p>2. Can I customize the settings?</p>
+                <p>Yes! You can customize various settings from the settings menu, including themes and language preferences.</p>
+                <p>3. How do I report an issue?</p>
+                <p>If you encounter any issues, please reach out to our support team.</p> 
+                <br>
+                <button class='nav-item' href='mailto://yixboost@mail.com'>Send e-mail</button>
+            </div>
+
+            <div id="about-content">
+                <h1>About WinGPT</h1>
+                <p>WinGPT is a powerful tool designed to provide users with easy access to advanced AI assistants on Windows. Our goal is to enhance productivity and creativity through the use of AI technologies. Join us in exploring the endless possibilities!</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function showContent(contentId) {
+            const contents = document.querySelectorAll('.main-content > div');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(contentId + '-content').style.display = 'block';
+
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // Show the home content by default
+        showContent('home');
+    </script>
+</body>
+</html>
