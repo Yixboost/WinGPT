@@ -6,6 +6,7 @@
 
 
 **WinGPT** is a powerful application that leverages AI technology to provide users with an intuitive and efficient experience on Windows platforms. With a wide range of features, WinGPT is designed to streamline your daily tasks.
+https://yixboost.github.io/wingpt/
 
 ## Table of Contents
 - [Features](#features)
