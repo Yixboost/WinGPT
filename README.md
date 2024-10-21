@@ -1,6 +1,6 @@
 ![logo-text](https://github.com/user-attachments/assets/0639d02a-40f7-4175-83dc-4eee608a2b18)
 
-# WinGPT
+# ✨ WinGPT
 
 ![Chromium](https://img.shields.io/badge/chromium-v93.0.4577.82-brightgreen.svg)  ![Electron](https://img.shields.io/badge/electron-v24.2.0-blue.svg) ![Node.js](https://img.shields.io/badge/node.js-v18.0.0-brightgreen.svg)  ![NPM](https://img.shields.io/badge/npm-v8.5.5-red.svg)  ![License](https://img.shields.io/badge/license-GNU-blue.svg)
 
