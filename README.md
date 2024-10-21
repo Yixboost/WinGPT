@@ -37,7 +37,7 @@
 - [Download WinGPT Windows ZIP](https://github.com/Yixboost/WinGPT/releases/download/v1.2.3/wingpt-windows.zip)
 
 ## Source Code
-- [Download Source Code](https://github.com/Yixboost/WinGPT/releases/download/v1.2.3/source-code.zip)
+- [Download Source Code](https://github.com/Yixboost/WinGPT/archive/refs/tags/v1.2.3.zip)
 
 ## License
 This project is licensed under the GNU license - see the [LICENSE](LICENSE) file for details.
