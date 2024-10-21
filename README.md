@@ -4,6 +4,7 @@
 
 ![Chromium](https://img.shields.io/badge/chromium-v93.0.4577.82-brightgreen.svg)  ![Electron](https://img.shields.io/badge/electron-v24.2.0-blue.svg) ![Node.js](https://img.shields.io/badge/node.js-v18.0.0-brightgreen.svg)  ![NPM](https://img.shields.io/badge/npm-v8.5.5-red.svg)  ![License](https://img.shields.io/badge/license-GNU-blue.svg)
 
+<img alt="Logo" align="right" src="https://yixboost.github.io/wingpt/assets/images/logo.png" width="10%" />
 
 **WinGPT** is a powerful application that leverages AI technology to provide users with an intuitive and efficient experience on Windows platforms. With a wide range of features, WinGPT is designed to streamline your daily tasks.
 https://yixboost.github.io/wingpt/
