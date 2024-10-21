@@ -7,7 +7,6 @@
 **WinGPT** is a powerful application that leverages AI technology to provide users with an intuitive and efficient experience on Windows platforms. With a wide range of features, WinGPT is designed to streamline your daily tasks.
 
 ## Table of Contents
-- [New Features](#new-features)
 - [Features](#features)
 - [Installation](#installation)
 - [System Requirements](#system-requirements)
@@ -17,14 +16,12 @@
 - [Contributing](#contributing)
 - [Questions or Suggestions](#questions-or-suggestions)
 
-## New Features
-- **Dev tools**: Get the Chrome DEV Tools with Settings -> 🛠️ Devtools
-- **Icons**: Added icons in settings for a more intuitive navigation experience.
-- **Fullscreen mode**: Activate Full Screen mode in Settings -> 🔲 Toggle Fullscreen.
-
 ## Features
 - **Intuitive User Interface**: A user-friendly interface designed for easy navigation.
 - **Auto-Launch Functionality**: Starts automatically on Windows startup.
+- **Dev tools**: Get the Chrome DEV Tools with Settings -> 🛠️ Devtools
+- **Icons**: Added icons in settings for a more intuitive navigation experience.
+- **Fullscreen mode**: Activate Full Screen mode in Settings -> 🔲 Toggle Fullscreen.
 
 ## Installation
 1. Download the ZIP files from the release.
