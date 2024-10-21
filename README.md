@@ -20,10 +20,38 @@
 
 
 ## Features
-- **Intuitive User Interface**: A user-friendly interface designed for easy navigation.
-- **Auto-Launch Functionality**: Starts automatically on Windows startup.
-- **Dev tools**: Get the Chrome DEV Tools with Settings -> 🛠️ Devtools
-- **Fullscreen mode**: Activate Full Screen mode in Settings -> 🔲 Toggle Fullscreen.
+
+- **🌟 Intuitive User Interface**: A user-friendly interface designed for seamless navigation, allowing users to easily access all features and settings.
+
+- **🚀 Auto-Launch Functionality**: Automatically starts with Windows, ensuring quick access to your favorite AI tools without manual intervention.
+
+- **🛠️ Developer Tools Access**: Easily access Chrome DevTools from the settings menu to inspect elements, debug scripts, and analyze performance. Simply navigate to **Settings → 🛠️ Devtools**.
+
+- **🔲 Fullscreen Mode**: Enjoy a distraction-free experience by entering fullscreen mode. Toggle it on or off via **Settings → 🔲 Toggle Fullscreen**.
+
+- **🌐 Network Status Check**: Automatically checks your internet connection status. If online, it loads the main application; if offline, it switches to an offline page, ensuring you always have a responsive interface.
+
+- **🤖 AI Bots Selection**: Choose from various AI bots, including:
+  - **🟢 ChatGPT**: Access ChatGPT for engaging conversations.
+  - **🟣 Google Gemini**: Explore capabilities of Google’s AI.
+  - **🟠 Claude**: Interact with Claude for various tasks.
+  - **🔵 You.com**: Utilize You.com for search-related AI tasks.
+  - **⚫ Blackbox.ai**: Leverage Blackbox.ai for advanced AI queries.
+
+- **🔄 Reload Page**: Refresh the current page quickly using the reload option in the menu.
+
+- **🔽 Minimize Window**: Minimize the application window for easy access later without closing it completely.
+
+- **❎ Close Application**: Exit the application cleanly with the close option available in the settings menu.
+
+- **❇️ Clear Site Data**: Reset all stored data (cookies, cache, etc.) with a single click to ensure privacy and troubleshoot issues.
+
+- **🔃 Reset Default Bot**: Revert to the default settings and bot selection whenever needed, providing a fresh start without having to reinstall the application.
+
+- **📈 Version Display**: Easily view the current version of the application within the settings menu, ensuring you're always updated.
+
+- **🔄 Menu Visibility Toggle**: Quickly toggle the menu bar visibility by pressing the "Alt" key, giving you more space for the main content when needed.
+
 
 ## Installation
 1. Download the ZIP files from the release.
