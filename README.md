@@ -21,7 +21,6 @@
 - **Intuitive User Interface**: A user-friendly interface designed for easy navigation.
 - **Auto-Launch Functionality**: Starts automatically on Windows startup.
 - **Dev tools**: Get the Chrome DEV Tools with Settings -> 🛠️ Devtools
-- **Icons**: Added icons in settings for a more intuitive navigation experience.
 - **Fullscreen mode**: Activate Full Screen mode in Settings -> 🔲 Toggle Fullscreen.
 
 ## Installation
