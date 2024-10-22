@@ -64,6 +64,38 @@ function createWindow() {
                     label: '⚫ Blackbox.ai',
                     click: () => selectBot('Blackbox.ai', 'https://www.blackbox.ai'),
                 },
+                {
+                    label: '🔴 Perplexity',
+                    click: () => selectBot('Perplexity', 'https://www.perplexity.ai'),
+                },
+                {
+                    label: '🟡 Jasper',
+                    click: () => selectBot('Jasper', 'https://www.jasper.ai'),
+                },
+                {
+                    label: '🟣 DeepL Write',
+                    click: () => selectBot('DeepL Write', 'https://www.deepl.com/write'),
+                },
+                {
+                    label: '🔵 QuillBot',
+                    click: () => selectBot('QuillBot', 'https://www.quillbot.com'),
+                },
+                {
+                    label: '🟢 Poe by Quora',
+                    click: () => selectBot('Poe', 'https://poe.com'),
+                },
+                {
+                    label: '🔴 MidJourney',
+                    click: () => selectBot('MidJourney', 'https://www.midjourney.com'),
+                },
+                {
+                    label: '🟡 Copy.ai',
+                    click: () => selectBot('Copy.ai', 'https://www.copy.ai'),
+                },
+                {
+                    label: '🟠 Writesonic',
+                    click: () => selectBot('Writesonic', 'https://writesonic.com'),
+                },                
                 { type: 'separator' },
                 {
                     label: '↗️ Go to Start Page',
@@ -180,7 +212,31 @@ function loadSelectedBot() {
             case 'Blackbox.ai':
                 botURL = 'https://www.blackbox.ai';
                 break;
-        }
+            case 'Perplexity':
+                botURL = 'https://www.perplexity.ai';
+                break;
+            case 'Jasper':
+                botURL = 'https://www.jasper.ai';
+                break;
+            case 'DeepL Write':
+                botURL = 'https://www.deepl.com/write';
+                break;
+            case 'QuillBot':
+                botURL = 'https://www.quillbot.com';
+                break;
+            case 'Poe':
+                botURL = 'https://poe.com';
+                break;
+            case 'MidJourney':
+                botURL = 'https://www.midjourney.com';
+                break;
+            case 'Copy.ai':
+                botURL = 'https://www.copy.ai';
+                break;
+            case 'Writesonic':
+                botURL = 'https://writesonic.com';
+                break;
+        }    
         win.setTitle(selectedBot);
         isOnline().then(online => {
             if (online) {
@@ -243,8 +299,33 @@ function detectAndSetBotFromURL(url) {
     } else if (url.includes('blackbox.ai')) {
         store.set('selectedBot', 'Blackbox.ai');
         win.setTitle('Blackbox.ai');
+    } else if (url.includes('perplexity.ai')) {
+        store.set('selectedBot', 'Perplexity');
+        win.setTitle('Perplexity');
+    } else if (url.includes('jasper.ai')) {
+        store.set('selectedBot', 'Jasper');
+        win.setTitle('Jasper');
+    } else if (url.includes('deepl.com/write')) {
+        store.set('selectedBot', 'DeepL Write');
+        win.setTitle('DeepL Write');
+    } else if (url.includes('quillbot.com')) {
+        store.set('selectedBot', 'QuillBot');
+        win.setTitle('QuillBot');
+    } else if (url.includes('poe.com')) {
+        store.set('selectedBot', 'Poe');
+        win.setTitle('Poe');
+    } else if (url.includes('midjourney.com')) {
+        store.set('selectedBot', 'MidJourney');
+        win.setTitle('MidJourney');
+    } else if (url.includes('copy.ai')) {
+        store.set('selectedBot', 'Copy.ai');
+        win.setTitle('Copy.ai');
+    } else if (url.includes('writesonic.com')) {
+        store.set('selectedBot', 'Writesonic');
+        win.setTitle('Writesonic');
     }
 }
+
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
