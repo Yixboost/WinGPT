@@ -39,6 +39,14 @@ https://yixboost.github.io/wingpt/
   - **🟠 Claude**: Interact with Claude for various tasks.
   - **🔵 You.com**: Utilize You.com for search-related AI tasks.
   - **⚫ Blackbox.ai**: Leverage Blackbox.ai for advanced AI queries.
+  - **🔴 Perplexity**: Interact with Perplexity for insightful AI-powered responses.
+  - **🟡 Jasper**: Generate creative and engaging content with Jasper’s AI.
+  - **🟣 DeepL Write**: Access advanced translation and writing assistance through DeepL Write.
+  - **🔵 QuillBot**: Utilize QuillBot for effective paraphrasing and writing support.
+  - **🟢 Poe by Quora**: Explore diverse conversational experiences with Poe by Quora.
+  - **🔴 MidJourney**: Create stunning visuals using AI with MidJourney.
+  - **🟡 Copy.ai**: Leverage Copy.ai for efficient marketing and copywriting solutions.
+  - **🟠 Writesonic**: Craft high-quality content effortlessly with Writesonic.
 
 - **🔄 Reload Page**: Refresh the current page quickly using the reload option in the menu.
 
